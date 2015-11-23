@@ -1,6 +1,6 @@
 {
-  "name": "acme/brilliant-wordpress-site",
-  "description": "My brilliant WordPress site",
+  "name": "PaperpixelStudio/prestashop-product-shortcode",
+  "description": "Display product information with the shortcode [presta-product] in Wordpress.",
   "repositories":[
     {
       "type":"composer",
@@ -8,10 +8,6 @@
     }
   ],
   "require": {
-    "aws/aws-sdk-php":"*",
-    "wpackagist-plugin/akismet":"dev-trunk",
-    "wpackagist-plugin/captcha":">=3.9",
-    "wpackagist-theme/hueman":"*"
   },
   "autoload": {
     "psr-0": {
