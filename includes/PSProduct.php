@@ -37,7 +37,7 @@ class PSProduct {
 
 	public function getId() {
 		if(!$this->id) {
-			$this->id = $this->productXML->id->asXML();
+			$this->id = (int)  $this->productXML->id;
 		}
 
 		return $this->id;
