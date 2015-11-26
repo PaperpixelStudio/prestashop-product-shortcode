@@ -45,7 +45,7 @@ class PSProduct {
 
 	public function getName() {
 		if(!$this->name) {
-			$this->name = $this->productXML->xpath('//name/language[@id="' . $this->psCurrentLanguageId . '"]')[0]->asXML();
+			$this->name = (string) $this->productXML->xpath('//name/language[@id="' . $this->psCurrentLanguageId . '"]')[0];
 		}
 
 		return $this->name;
@@ -76,7 +76,7 @@ class PSProduct {
 
 	public function getDescriptionShort() {
 		if(!$this->description_short) {
-			$this->description_short = $this->productXML->xpath('//description_short/language[@id="' . $this->psCurrentLanguageId . '"]')[0]->asXML();
+			$this->description_short = (string) $this->productXML->xpath('//description_short/language[@id="' . $this->psCurrentLanguageId . '"]')[0];
 		}
 
 		return $this->description_short;
