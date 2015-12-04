@@ -20,6 +20,7 @@ class PrestaProductShortcode {
 
 		$atts = shortcode_atts(array(
 			'id' => '',
+			'ids' => '',
 			'language' => defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'en',
 			'limit' => -1,
 			'sort' => 'DESC'

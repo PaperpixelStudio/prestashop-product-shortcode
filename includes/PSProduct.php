@@ -48,7 +48,7 @@ class PSProduct {
 			$this->name = (string) $this->productXML->xpath('//name/language[@id="' . $this->psCurrentLanguageId . '"]')[0];
 		}
 
-		return $this->name;
+		return sanitize_text_field($this->name);
 	}
 
 	public function getUrl() {
@@ -71,7 +71,7 @@ class PSProduct {
 			$this->description = $this->productXML->xpath('//description/language[@id="' . $this->psCurrentLanguageId . '"]')[0]->asXML();
 		}
 
-		return $this->description;
+		return sanitize_text_field($this->description);
 	}
 
 	public function getDescriptionShort() {
@@ -79,7 +79,7 @@ class PSProduct {
 			$this->description_short = (string) $this->productXML->xpath('//description_short/language[@id="' . $this->psCurrentLanguageId . '"]')[0];
 		}
 
-		return $this->description_short;
+		return sanitize_text_field($this->description_short);
 	}
 
 	public function getDefaultImageUrl() {
